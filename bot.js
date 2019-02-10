@@ -221,7 +221,7 @@ fs.writeFile("./creditsCode.json", JSON.stringify(credits), (err) => {
   }
   
     if(message.content.startsWith(prefix + "credit" || prefix + "credits")) {
-message.channel.send(`**${message.author.username}, your :credit_card: balance is \`\`${userData.credits});
+message.channel.send(`**${message.author.username}, your :credit_card: balance is \`\`${userData.credits}\`\`.**`);
 }
 });
 
