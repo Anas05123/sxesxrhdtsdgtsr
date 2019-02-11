@@ -207,7 +207,7 @@ client.on('message',async message => {
     
 if(message.author.bot) return;
 if(!credits[message.author.id]) credits[message.author.id] = {
-    credits: 50
+    credits: 0
 };
 
 let userData = credits[message.author.id];
@@ -224,6 +224,9 @@ fs.writeFile("./creditsCode.json", JSON.stringify(credits), (err) => {
 message.channel.send(`**${message.author.username}, your :credit_card: balance is \`\`${userData.credits}\`\`.**`);
 }
 });
+
+    if(message.content.startsWith(prefix+ "credit ${message.author.username}" || prefix + "credits ${message.author.username}")) {
+message.channel.send(`**${message.author.send.username},has now :credit_card: balnace is \`\`${userData.credits}\`\`.**`);
 
 client.on('message', async message => {
     let amount = 300;
